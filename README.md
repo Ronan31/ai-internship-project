@@ -138,8 +138,9 @@ reformulate instructions and outputs. Parameters:
 - dataset_path: the path of the dataset that is multiplied.
 - new_dataset_path: path of the dataset to be created.
 - nb_multiply: number of times to multiply the dataset.
-Base model: [llama-7b-hf](https://huggingface.co/decapoda-research/Llama-7b-hf)
-Experiment: [Alpaca-lora-7b](https://huggingface.co/tloen/alpaca-lora-7b).   ```bash
+Base model: [llama-7b-hf](https://huggingface.co/decapoda-research/Llama-7b-hf).
+Experiment: [Alpaca-lora-7b](https://huggingface.co/tloen/alpaca-lora-7b).
+   ```bash
    LD_LIBRARY_PATH=/usr/local/cuda-11.6/targets/x86_64-linux/lib python3 –dataset_path dataset.json -new_dataset_path new_dataset.json -nb_multiply 1
    ```
 → reduce_dataset.py
