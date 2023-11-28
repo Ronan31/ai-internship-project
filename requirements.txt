@@ -1,0 +1,16 @@
+accelerate
+appdirs
+loralib
+bitsandbytes
+black
+black[jupyter]
+datasets
+evaluate
+fire
+Levenshtein
+git+https://github.com/huggingface/peft.git
+git+https://github.com/huggingface/transformers.git
+transformers>=4.28.0
+sentencepiece
+gradio==3.44.4
+scipy

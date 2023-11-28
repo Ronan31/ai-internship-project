@@ -1,0 +1,1002 @@
+[
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public void serialize(LittleEndianOutput out) {out.writeShort(field_1_vcenter);}",
+    "output": "public override void Serialize(ILittleEndianOutput out1){out1.WriteShort(field_1_vcenter);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override void Serialize(ILittleEndianOutput out1){out1.WriteShort(field_1_vcenter);}",
+    "output": "public void serialize(LittleEndianOutput out) {out.writeShort(field_1_vcenter);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public void addAll(BlockList<T> src) {if (src.size == 0)return;int srcDirIdx = 0;for (; srcDirIdx < src.tailDirIdx; srcDirIdx++)addAll(src.directory[srcDirIdx], 0, BLOCK_SIZE);if (src.tailBlkIdx != 0)addAll(src.tailBlock, 0, src.tailBlkIdx);}",
+    "output": "public virtual void AddAll(NGit.Util.BlockList<T> src){if (src.size == 0){return;}int srcDirIdx = 0;for (; srcDirIdx < src.tailDirIdx; srcDirIdx++){AddAll(src.directory[srcDirIdx], 0, BLOCK_SIZE);}if (src.tailBlkIdx != 0){AddAll(src.tailBlock, 0, src.tailBlkIdx);}}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual void AddAll(NGit.Util.BlockList<T> src){if (src.size == 0){return;}int srcDirIdx = 0;for (; srcDirIdx < src.tailDirIdx; srcDirIdx++){AddAll(src.directory[srcDirIdx], 0, BLOCK_SIZE);}if (src.tailBlkIdx != 0){AddAll(src.tailBlock, 0, src.tailBlkIdx);}}",
+    "output": "public void addAll(BlockList<T> src) {if (src.size == 0)return;int srcDirIdx = 0;for (; srcDirIdx < src.tailDirIdx; srcDirIdx++)addAll(src.directory[srcDirIdx], 0, BLOCK_SIZE);if (src.tailBlkIdx != 0)addAll(src.tailBlock, 0, src.tailBlkIdx);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public void writeByte(byte b) {if (upto == blockSize) {if (currentBlock != null) {addBlock(currentBlock);}currentBlock = new byte[blockSize];upto = 0;}currentBlock[upto++] = b;}",
+    "output": "public override void WriteByte(byte b){if (outerInstance.upto == outerInstance.blockSize){if (outerInstance.currentBlock != null){outerInstance.blocks.Add(outerInstance.currentBlock);outerInstance.blockEnd.Add(outerInstance.upto);}outerInstance.currentBlock = new byte[outerInstance.blockSize];outerInstance.upto = 0;}outerInstance.currentBlock[outerInstance.upto++] = (byte)b;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override void WriteByte(byte b){if (outerInstance.upto == outerInstance.blockSize){if (outerInstance.currentBlock != null){outerInstance.blocks.Add(outerInstance.currentBlock);outerInstance.blockEnd.Add(outerInstance.upto);}outerInstance.currentBlock = new byte[outerInstance.blockSize];outerInstance.upto = 0;}outerInstance.currentBlock[outerInstance.upto++] = (byte)b;}",
+    "output": "public void writeByte(byte b) {if (upto == blockSize) {if (currentBlock != null) {addBlock(currentBlock);}currentBlock = new byte[blockSize];upto = 0;}currentBlock[upto++] = b;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public ObjectId getObjectId() {return objectId;}",
+    "output": "public virtual ObjectId GetObjectId(){return objectId;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual ObjectId GetObjectId(){return objectId;}",
+    "output": "public ObjectId getObjectId() {return objectId;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public DeleteDomainEntryResult deleteDomainEntry(DeleteDomainEntryRequest request) {request = beforeClientExecution(request);return executeDeleteDomainEntry(request);}",
+    "output": "public virtual DeleteDomainEntryResponse DeleteDomainEntry(DeleteDomainEntryRequest request){var options = new InvokeOptions();options.RequestMarshaller = DeleteDomainEntryRequestMarshaller.Instance;options.ResponseUnmarshaller = DeleteDomainEntryResponseUnmarshaller.Instance;return Invoke<DeleteDomainEntryResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual DeleteDomainEntryResponse DeleteDomainEntry(DeleteDomainEntryRequest request){var options = new InvokeOptions();options.RequestMarshaller = DeleteDomainEntryRequestMarshaller.Instance;options.ResponseUnmarshaller = DeleteDomainEntryResponseUnmarshaller.Instance;return Invoke<DeleteDomainEntryResponse>(request, options);}",
+    "output": "public DeleteDomainEntryResult deleteDomainEntry(DeleteDomainEntryRequest request) {request = beforeClientExecution(request);return executeDeleteDomainEntry(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public long ramBytesUsed() {return ((termOffsets!=null)? termOffsets.ramBytesUsed() : 0) +((termsDictOffsets!=null)? termsDictOffsets.ramBytesUsed() : 0);}",
+    "output": "public virtual long RamBytesUsed(){return fst == null ? 0 : fst.GetSizeInBytes();}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual long RamBytesUsed(){return fst == null ? 0 : fst.GetSizeInBytes();}",
+    "output": "public long ramBytesUsed() {return ((termOffsets!=null)? termOffsets.ramBytesUsed() : 0) +((termsDictOffsets!=null)? termsDictOffsets.ramBytesUsed() : 0);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public final String getFullMessage() {byte[] raw = buffer;int msgB = RawParseUtils.tagMessage(raw, 0);if (msgB < 0) {return \"\"; }return RawParseUtils.decode(guessEncoding(), raw, msgB, raw.length);}",
+    "output": "public string GetFullMessage(){byte[] raw = buffer;int msgB = RawParseUtils.TagMessage(raw, 0);if (msgB < 0){return string.Empty;}Encoding enc = RawParseUtils.ParseEncoding(raw);return RawParseUtils.Decode(enc, raw, msgB, raw.Length);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public string GetFullMessage(){byte[] raw = buffer;int msgB = RawParseUtils.TagMessage(raw, 0);if (msgB < 0){return string.Empty;}Encoding enc = RawParseUtils.ParseEncoding(raw);return RawParseUtils.Decode(enc, raw, msgB, raw.Length);}",
+    "output": "public final String getFullMessage() {byte[] raw = buffer;int msgB = RawParseUtils.tagMessage(raw, 0);if (msgB < 0) {return \"\"; }return RawParseUtils.decode(guessEncoding(), raw, msgB, raw.length);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public POIFSFileSystem() {this(true);_header.setBATCount(1);_header.setBATArray(new int[]{1});BATBlock bb = BATBlock.createEmptyBATBlock(bigBlockSize, false);bb.setOurBlockIndex(1);_bat_blocks.add(bb);setNextBlock(0, POIFSConstants.END_OF_CHAIN);setNextBlock(1, POIFSConstants.FAT_SECTOR_BLOCK);_property_table.setStartBlock(0);}",
+    "output": "public POIFSFileSystem(){HeaderBlock headerBlock = new HeaderBlock(bigBlockSize);_property_table = new PropertyTable(headerBlock);_documents      = new ArrayList();_root           = null;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public POIFSFileSystem(){HeaderBlock headerBlock = new HeaderBlock(bigBlockSize);_property_table = new PropertyTable(headerBlock);_documents      = new ArrayList();_root           = null;}",
+    "output": "public POIFSFileSystem() {this(true);_header.setBATCount(1);_header.setBATArray(new int[]{1});BATBlock bb = BATBlock.createEmptyBATBlock(bigBlockSize, false);bb.setOurBlockIndex(1);_bat_blocks.add(bb);setNextBlock(0, POIFSConstants.END_OF_CHAIN);setNextBlock(1, POIFSConstants.FAT_SECTOR_BLOCK);_property_table.setStartBlock(0);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public void init(int address) {slice = pool.buffers[address >> ByteBlockPool.BYTE_BLOCK_SHIFT];assert slice != null;upto = address & ByteBlockPool.BYTE_BLOCK_MASK;offset0 = address;assert upto < slice.length;}",
+    "output": "public void Init(int address){slice = pool.Buffers[address >> ByteBlockPool.BYTE_BLOCK_SHIFT];Debug.Assert(slice != null);upto = address & ByteBlockPool.BYTE_BLOCK_MASK;offset0 = address;Debug.Assert(upto < slice.Length);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public void Init(int address){slice = pool.Buffers[address >> ByteBlockPool.BYTE_BLOCK_SHIFT];Debug.Assert(slice != null);upto = address & ByteBlockPool.BYTE_BLOCK_MASK;offset0 = address;Debug.Assert(upto < slice.Length);}",
+    "output": "public void init(int address) {slice = pool.buffers[address >> ByteBlockPool.BYTE_BLOCK_SHIFT];assert slice != null;upto = address & ByteBlockPool.BYTE_BLOCK_MASK;offset0 = address;assert upto < slice.length;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public SubmoduleAddCommand setPath(String path) {this.path = path;return this;}",
+    "output": "public virtual NGit.Api.SubmoduleAddCommand SetPath(string path){this.path = path;return this;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual NGit.Api.SubmoduleAddCommand SetPath(string path){this.path = path;return this;}",
+    "output": "public SubmoduleAddCommand setPath(String path) {this.path = path;return this;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public ListIngestionsResult listIngestions(ListIngestionsRequest request) {request = beforeClientExecution(request);return executeListIngestions(request);}",
+    "output": "public virtual ListIngestionsResponse ListIngestions(ListIngestionsRequest request){var options = new InvokeOptions();options.RequestMarshaller = ListIngestionsRequestMarshaller.Instance;options.ResponseUnmarshaller = ListIngestionsResponseUnmarshaller.Instance;return Invoke<ListIngestionsResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual ListIngestionsResponse ListIngestions(ListIngestionsRequest request){var options = new InvokeOptions();options.RequestMarshaller = ListIngestionsRequestMarshaller.Instance;options.ResponseUnmarshaller = ListIngestionsResponseUnmarshaller.Instance;return Invoke<ListIngestionsResponse>(request, options);}",
+    "output": "public ListIngestionsResult listIngestions(ListIngestionsRequest request) {request = beforeClientExecution(request);return executeListIngestions(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public QueryParserTokenManager(CharStream stream, int lexState){this(stream);SwitchTo(lexState);}",
+    "output": "public QueryParserTokenManager(ICharStream stream, int lexState): this(stream){SwitchTo(lexState);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public QueryParserTokenManager(ICharStream stream, int lexState): this(stream){SwitchTo(lexState);}",
+    "output": "public QueryParserTokenManager(CharStream stream, int lexState){this(stream);SwitchTo(lexState);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public GetShardIteratorResult getShardIterator(GetShardIteratorRequest request) {request = beforeClientExecution(request);return executeGetShardIterator(request);}",
+    "output": "public virtual GetShardIteratorResponse GetShardIterator(GetShardIteratorRequest request){var options = new InvokeOptions();options.RequestMarshaller = GetShardIteratorRequestMarshaller.Instance;options.ResponseUnmarshaller = GetShardIteratorResponseUnmarshaller.Instance;return Invoke<GetShardIteratorResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual GetShardIteratorResponse GetShardIterator(GetShardIteratorRequest request){var options = new InvokeOptions();options.RequestMarshaller = GetShardIteratorRequestMarshaller.Instance;options.ResponseUnmarshaller = GetShardIteratorResponseUnmarshaller.Instance;return Invoke<GetShardIteratorResponse>(request, options);}",
+    "output": "public GetShardIteratorResult getShardIterator(GetShardIteratorRequest request) {request = beforeClientExecution(request);return executeGetShardIterator(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public ModifyStrategyRequest() {super(\"aegis\", \"2016-11-11\", \"ModifyStrategy\", \"vipaegis\");setMethod(MethodType.POST);}",
+    "output": "public ModifyStrategyRequest(): base(\"aegis\", \"2016-11-11\", \"ModifyStrategy\", \"vipaegis\", \"openAPI\"){Method = MethodType.POST;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public ModifyStrategyRequest(): base(\"aegis\", \"2016-11-11\", \"ModifyStrategy\", \"vipaegis\", \"openAPI\"){Method = MethodType.POST;}",
+    "output": "public ModifyStrategyRequest() {super(\"aegis\", \"2016-11-11\", \"ModifyStrategy\", \"vipaegis\");setMethod(MethodType.POST);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public boolean ready() throws IOException {synchronized (lock) {if (in == null) {throw new IOException(\"InputStreamReader is closed\");}try {return bytes.hasRemaining() || in.available() > 0;} catch (IOException e) {return false;}}}",
+    "output": "public override bool ready(){lock (@lock){if (@in == null){throw new System.IO.IOException(\"InputStreamReader is closed\");}try{return bytes.hasRemaining() || @in.available() > 0;}catch (System.IO.IOException){return false;}}}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override bool ready(){lock (@lock){if (@in == null){throw new System.IO.IOException(\"InputStreamReader is closed\");}try{return bytes.hasRemaining() || @in.available() > 0;}catch (System.IO.IOException){return false;}}}",
+    "output": "public boolean ready() throws IOException {synchronized (lock) {if (in == null) {throw new IOException(\"InputStreamReader is closed\");}try {return bytes.hasRemaining() || in.available() > 0;} catch (IOException e) {return false;}}}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public EscherOptRecord getOptRecord() {return _optRecord;}",
+    "output": "protected internal EscherOptRecord GetOptRecord(){return _optRecord;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "protected internal EscherOptRecord GetOptRecord(){return _optRecord;}",
+    "output": "public EscherOptRecord getOptRecord() {return _optRecord;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public synchronized int read(byte[] buffer, int offset, int length) {if (buffer == null) {throw new NullPointerException(\"buffer == null\");}Arrays.checkOffsetAndCount(buffer.length, offset, length);if (length == 0) {return 0;}int copylen = count - pos < length ? count - pos : length;for (int i = 0; i < copylen; i++) {buffer[offset + i] = (byte) this.buffer.charAt(pos + i);}pos += copylen;return copylen;}",
+    "output": "public override int read(byte[] buffer, int offset, int length){lock (this){if (buffer == null){throw new System.ArgumentNullException(\"buffer == null\");}java.util.Arrays.checkOffsetAndCount(buffer.Length, offset, length);if (length == 0){return 0;}int copylen = count - pos < length ? count - pos : length;{for (int i = 0; i < copylen; i++){buffer[offset + i] = unchecked((byte)this.buffer[pos + i]);}}pos += copylen;return copylen;}}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override int read(byte[] buffer, int offset, int length){lock (this){if (buffer == null){throw new System.ArgumentNullException(\"buffer == null\");}java.util.Arrays.checkOffsetAndCount(buffer.Length, offset, length);if (length == 0){return 0;}int copylen = count - pos < length ? count - pos : length;{for (int i = 0; i < copylen; i++){buffer[offset + i] = unchecked((byte)this.buffer[pos + i]);}}pos += copylen;return copylen;}}",
+    "output": "public synchronized int read(byte[] buffer, int offset, int length) {if (buffer == null) {throw new NullPointerException(\"buffer == null\");}Arrays.checkOffsetAndCount(buffer.length, offset, length);if (length == 0) {return 0;}int copylen = count - pos < length ? count - pos : length;for (int i = 0; i < copylen; i++) {buffer[offset + i] = (byte) this.buffer.charAt(pos + i);}pos += copylen;return copylen;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public OpenNLPSentenceBreakIterator(NLPSentenceDetectorOp sentenceOp) {this.sentenceOp = sentenceOp;}",
+    "output": "public OpenNLPSentenceBreakIterator(NLPSentenceDetectorOp sentenceOp){this.sentenceOp = sentenceOp;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public OpenNLPSentenceBreakIterator(NLPSentenceDetectorOp sentenceOp){this.sentenceOp = sentenceOp;}",
+    "output": "public OpenNLPSentenceBreakIterator(NLPSentenceDetectorOp sentenceOp) {this.sentenceOp = sentenceOp;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public void print(String str) {write(str != null ? str : String.valueOf((Object) null));}",
+    "output": "public virtual void print(string str){write(str != null ? str : Sharpen.StringHelper.GetValueOf((object)null));}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual void print(string str){write(str != null ? str : Sharpen.StringHelper.GetValueOf((object)null));}",
+    "output": "public void print(String str) {write(str != null ? str : String.valueOf((Object) null));}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public NotImplementedFunctionException(String functionName, NotImplementedException cause) {super(functionName, cause);this.functionName = functionName;}",
+    "output": "public NotImplementedFunctionException(string functionName, NotImplementedException cause): base(functionName,cause){this.functionName = functionName;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public NotImplementedFunctionException(string functionName, NotImplementedException cause): base(functionName,cause){this.functionName = functionName;}",
+    "output": "public NotImplementedFunctionException(String functionName, NotImplementedException cause) {super(functionName, cause);this.functionName = functionName;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public V next() {return super.nextEntry().getValue();}",
+    "output": "public override V next(){return this.nextEntry().value;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override V next(){return this.nextEntry().value;}",
+    "output": "public V next() {return super.nextEntry().getValue();}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public final void readBytes(byte[] b, int offset, int len, boolean useBuffer) throws IOException {int available = bufferLength - bufferPosition;if(len <= available){if(len>0) System.arraycopy(buffer, bufferPosition, b, offset, len);bufferPosition+=len;} else {if(available > 0){System.arraycopy(buffer, bufferPosition, b, offset, available);offset += available;len -= available;bufferPosition += available;}if (useBuffer && len<bufferSize){refill();if(bufferLength<len){System.arraycopy(buffer, 0, b, offset, bufferLength);throw new EOFException(\"read past EOF: \" + this);} else {System.arraycopy(buffer, 0, b, offset, len);bufferPosition=len;}} else {long after = bufferStart+bufferPosition+len;if(after > length())throw new EOFException(\"read past EOF: \" + this);readInternal(b, offset, len);bufferStart = after;bufferPosition = 0;bufferLength = 0;                    }}}",
+    "output": "public override sealed void ReadBytes(byte[] b, int offset, int len, bool useBuffer){int available = bufferLength - bufferPosition;if (len <= available){if (len > 0) {Buffer.BlockCopy(m_buffer, bufferPosition, b, offset, len);}bufferPosition += len;}else{if (available > 0){Buffer.BlockCopy(m_buffer, bufferPosition, b, offset, available);offset += available;len -= available;bufferPosition += available;}if (useBuffer && len < bufferSize){Refill();if (bufferLength < len){Buffer.BlockCopy(m_buffer, 0, b, offset, bufferLength);throw new EndOfStreamException(\"read past EOF: \" + this);}else{Buffer.BlockCopy(m_buffer, 0, b, offset, len);bufferPosition = len;}}else{long after = bufferStart + bufferPosition + len;if (after > Length){throw new EndOfStreamException(\"read past EOF: \" + this);}ReadInternal(b, offset, len);bufferStart = after;bufferPosition = 0;bufferLength = 0; }}}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override sealed void ReadBytes(byte[] b, int offset, int len, bool useBuffer){int available = bufferLength - bufferPosition;if (len <= available){if (len > 0) {Buffer.BlockCopy(m_buffer, bufferPosition, b, offset, len);}bufferPosition += len;}else{if (available > 0){Buffer.BlockCopy(m_buffer, bufferPosition, b, offset, available);offset += available;len -= available;bufferPosition += available;}if (useBuffer && len < bufferSize){Refill();if (bufferLength < len){Buffer.BlockCopy(m_buffer, 0, b, offset, bufferLength);throw new EndOfStreamException(\"read past EOF: \" + this);}else{Buffer.BlockCopy(m_buffer, 0, b, offset, len);bufferPosition = len;}}else{long after = bufferStart + bufferPosition + len;if (after > Length){throw new EndOfStreamException(\"read past EOF: \" + this);}ReadInternal(b, offset, len);bufferStart = after;bufferPosition = 0;bufferLength = 0; }}}",
+    "output": "public final void readBytes(byte[] b, int offset, int len, boolean useBuffer) throws IOException {int available = bufferLength - bufferPosition;if(len <= available){if(len>0) System.arraycopy(buffer, bufferPosition, b, offset, len);bufferPosition+=len;} else {if(available > 0){System.arraycopy(buffer, bufferPosition, b, offset, available);offset += available;len -= available;bufferPosition += available;}if (useBuffer && len<bufferSize){refill();if(bufferLength<len){System.arraycopy(buffer, 0, b, offset, bufferLength);throw new EOFException(\"read past EOF: \" + this);} else {System.arraycopy(buffer, 0, b, offset, len);bufferPosition=len;}} else {long after = bufferStart+bufferPosition+len;if(after > length())throw new EOFException(\"read past EOF: \" + this);readInternal(b, offset, len);bufferStart = after;bufferPosition = 0;bufferLength = 0;                    }}}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public TagQueueResult tagQueue(TagQueueRequest request) {request = beforeClientExecution(request);return executeTagQueue(request);}",
+    "output": "public virtual TagQueueResponse TagQueue(TagQueueRequest request){var options = new InvokeOptions();options.RequestMarshaller = TagQueueRequestMarshaller.Instance;options.ResponseUnmarshaller = TagQueueResponseUnmarshaller.Instance;return Invoke<TagQueueResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual TagQueueResponse TagQueue(TagQueueRequest request){var options = new InvokeOptions();options.RequestMarshaller = TagQueueRequestMarshaller.Instance;options.ResponseUnmarshaller = TagQueueResponseUnmarshaller.Instance;return Invoke<TagQueueResponse>(request, options);}",
+    "output": "public TagQueueResult tagQueue(TagQueueRequest request) {request = beforeClientExecution(request);return executeTagQueue(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public void remove() {throw new UnsupportedOperationException();}",
+    "output": "public override void Remove(){throw new NotSupportedException();}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override void Remove(){throw new NotSupportedException();}",
+    "output": "public void remove() {throw new UnsupportedOperationException();}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public CacheSubnetGroup modifyCacheSubnetGroup(ModifyCacheSubnetGroupRequest request) {request = beforeClientExecution(request);return executeModifyCacheSubnetGroup(request);}",
+    "output": "public virtual ModifyCacheSubnetGroupResponse ModifyCacheSubnetGroup(ModifyCacheSubnetGroupRequest request){var options = new InvokeOptions();options.RequestMarshaller = ModifyCacheSubnetGroupRequestMarshaller.Instance;options.ResponseUnmarshaller = ModifyCacheSubnetGroupResponseUnmarshaller.Instance;return Invoke<ModifyCacheSubnetGroupResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual ModifyCacheSubnetGroupResponse ModifyCacheSubnetGroup(ModifyCacheSubnetGroupRequest request){var options = new InvokeOptions();options.RequestMarshaller = ModifyCacheSubnetGroupRequestMarshaller.Instance;options.ResponseUnmarshaller = ModifyCacheSubnetGroupResponseUnmarshaller.Instance;return Invoke<ModifyCacheSubnetGroupResponse>(request, options);}",
+    "output": "public CacheSubnetGroup modifyCacheSubnetGroup(ModifyCacheSubnetGroupRequest request) {request = beforeClientExecution(request);return executeModifyCacheSubnetGroup(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public void setParams(String params) {super.setParams(params);language = country = variant = \"\";StringTokenizer st = new StringTokenizer(params, \",\");if (st.hasMoreTokens())language = st.nextToken();if (st.hasMoreTokens())country = st.nextToken();if (st.hasMoreTokens())variant = st.nextToken();}",
+    "output": "public override void SetParams(string @params){base.SetParams(@params);culture = \"\";string ignore;StringTokenizer st = new StringTokenizer(@params, \",\");if (st.MoveNext())culture = st.Current;if (st.MoveNext())culture += \"-\" + st.Current;if (st.MoveNext())ignore = st.Current;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override void SetParams(string @params){base.SetParams(@params);culture = \"\";string ignore;StringTokenizer st = new StringTokenizer(@params, \",\");if (st.MoveNext())culture = st.Current;if (st.MoveNext())culture += \"-\" + st.Current;if (st.MoveNext())ignore = st.Current;}",
+    "output": "public void setParams(String params) {super.setParams(params);language = country = variant = \"\";StringTokenizer st = new StringTokenizer(params, \",\");if (st.hasMoreTokens())language = st.nextToken();if (st.hasMoreTokens())country = st.nextToken();if (st.hasMoreTokens())variant = st.nextToken();}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public DeleteDocumentationVersionResult deleteDocumentationVersion(DeleteDocumentationVersionRequest request) {request = beforeClientExecution(request);return executeDeleteDocumentationVersion(request);}",
+    "output": "public virtual DeleteDocumentationVersionResponse DeleteDocumentationVersion(DeleteDocumentationVersionRequest request){var options = new InvokeOptions();options.RequestMarshaller = DeleteDocumentationVersionRequestMarshaller.Instance;options.ResponseUnmarshaller = DeleteDocumentationVersionResponseUnmarshaller.Instance;return Invoke<DeleteDocumentationVersionResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual DeleteDocumentationVersionResponse DeleteDocumentationVersion(DeleteDocumentationVersionRequest request){var options = new InvokeOptions();options.RequestMarshaller = DeleteDocumentationVersionRequestMarshaller.Instance;options.ResponseUnmarshaller = DeleteDocumentationVersionResponseUnmarshaller.Instance;return Invoke<DeleteDocumentationVersionResponse>(request, options);}",
+    "output": "public DeleteDocumentationVersionResult deleteDocumentationVersion(DeleteDocumentationVersionRequest request) {request = beforeClientExecution(request);return executeDeleteDocumentationVersion(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public boolean equals(Object obj) {if (!(obj instanceof FacetLabel)) {return false;}FacetLabel other = (FacetLabel) obj;if (length != other.length) {return false; }for (int i = length - 1; i >= 0; i--) {if (!components[i].equals(other.components[i])) {return false;}}return true;}",
+    "output": "public override bool Equals(object obj){if (!(obj is FacetLabel)){return false;}FacetLabel other = (FacetLabel)obj;if (Length != other.Length){return false; }for (int i = Length - 1; i >= 0; i--){if (!Components[i].Equals(other.Components[i], StringComparison.Ordinal)){return false;}}return true;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override bool Equals(object obj){if (!(obj is FacetLabel)){return false;}FacetLabel other = (FacetLabel)obj;if (Length != other.Length){return false; }for (int i = Length - 1; i >= 0; i--){if (!Components[i].Equals(other.Components[i], StringComparison.Ordinal)){return false;}}return true;}",
+    "output": "public boolean equals(Object obj) {if (!(obj instanceof FacetLabel)) {return false;}FacetLabel other = (FacetLabel) obj;if (length != other.length) {return false; }for (int i = length - 1; i >= 0; i--) {if (!components[i].equals(other.components[i])) {return false;}}return true;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public GetInstanceAccessDetailsResult getInstanceAccessDetails(GetInstanceAccessDetailsRequest request) {request = beforeClientExecution(request);return executeGetInstanceAccessDetails(request);}",
+    "output": "public virtual GetInstanceAccessDetailsResponse GetInstanceAccessDetails(GetInstanceAccessDetailsRequest request){var options = new InvokeOptions();options.RequestMarshaller = GetInstanceAccessDetailsRequestMarshaller.Instance;options.ResponseUnmarshaller = GetInstanceAccessDetailsResponseUnmarshaller.Instance;return Invoke<GetInstanceAccessDetailsResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual GetInstanceAccessDetailsResponse GetInstanceAccessDetails(GetInstanceAccessDetailsRequest request){var options = new InvokeOptions();options.RequestMarshaller = GetInstanceAccessDetailsRequestMarshaller.Instance;options.ResponseUnmarshaller = GetInstanceAccessDetailsResponseUnmarshaller.Instance;return Invoke<GetInstanceAccessDetailsResponse>(request, options);}",
+    "output": "public GetInstanceAccessDetailsResult getInstanceAccessDetails(GetInstanceAccessDetailsRequest request) {request = beforeClientExecution(request);return executeGetInstanceAccessDetails(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public HSSFPolygon createPolygon(HSSFChildAnchor anchor) {HSSFPolygon shape = new HSSFPolygon(this, anchor);shape.setParent(this);shape.setAnchor(anchor);shapes.add(shape);onCreate(shape);return shape;}",
+    "output": "public HSSFPolygon CreatePolygon(HSSFChildAnchor anchor){HSSFPolygon shape = new HSSFPolygon(this, anchor);shape.Parent = this;shape.Anchor = anchor;shapes.Add(shape);OnCreate(shape);return shape;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public HSSFPolygon CreatePolygon(HSSFChildAnchor anchor){HSSFPolygon shape = new HSSFPolygon(this, anchor);shape.Parent = this;shape.Anchor = anchor;shapes.Add(shape);OnCreate(shape);return shape;}",
+    "output": "public HSSFPolygon createPolygon(HSSFChildAnchor anchor) {HSSFPolygon shape = new HSSFPolygon(this, anchor);shape.setParent(this);shape.setAnchor(anchor);shapes.add(shape);onCreate(shape);return shape;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public String getSheetName(int sheetIndex) {return getBoundSheetRec(sheetIndex).getSheetname();}",
+    "output": "public String GetSheetName(int sheetIndex){return GetBoundSheetRec(sheetIndex).Sheetname;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public String GetSheetName(int sheetIndex){return GetBoundSheetRec(sheetIndex).Sheetname;}",
+    "output": "public String getSheetName(int sheetIndex) {return getBoundSheetRec(sheetIndex).getSheetname();}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public GetDashboardResult getDashboard(GetDashboardRequest request) {request = beforeClientExecution(request);return executeGetDashboard(request);}",
+    "output": "public virtual GetDashboardResponse GetDashboard(GetDashboardRequest request){var options = new InvokeOptions();options.RequestMarshaller = GetDashboardRequestMarshaller.Instance;options.ResponseUnmarshaller = GetDashboardResponseUnmarshaller.Instance;return Invoke<GetDashboardResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual GetDashboardResponse GetDashboard(GetDashboardRequest request){var options = new InvokeOptions();options.RequestMarshaller = GetDashboardRequestMarshaller.Instance;options.ResponseUnmarshaller = GetDashboardResponseUnmarshaller.Instance;return Invoke<GetDashboardResponse>(request, options);}",
+    "output": "public GetDashboardResult getDashboard(GetDashboardRequest request) {request = beforeClientExecution(request);return executeGetDashboard(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public AssociateSigninDelegateGroupsWithAccountResult associateSigninDelegateGroupsWithAccount(AssociateSigninDelegateGroupsWithAccountRequest request) {request = beforeClientExecution(request);return executeAssociateSigninDelegateGroupsWithAccount(request);}",
+    "output": "public virtual AssociateSigninDelegateGroupsWithAccountResponse AssociateSigninDelegateGroupsWithAccount(AssociateSigninDelegateGroupsWithAccountRequest request){var options = new InvokeOptions();options.RequestMarshaller = AssociateSigninDelegateGroupsWithAccountRequestMarshaller.Instance;options.ResponseUnmarshaller = AssociateSigninDelegateGroupsWithAccountResponseUnmarshaller.Instance;return Invoke<AssociateSigninDelegateGroupsWithAccountResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual AssociateSigninDelegateGroupsWithAccountResponse AssociateSigninDelegateGroupsWithAccount(AssociateSigninDelegateGroupsWithAccountRequest request){var options = new InvokeOptions();options.RequestMarshaller = AssociateSigninDelegateGroupsWithAccountRequestMarshaller.Instance;options.ResponseUnmarshaller = AssociateSigninDelegateGroupsWithAccountResponseUnmarshaller.Instance;return Invoke<AssociateSigninDelegateGroupsWithAccountResponse>(request, options);}",
+    "output": "public AssociateSigninDelegateGroupsWithAccountResult associateSigninDelegateGroupsWithAccount(AssociateSigninDelegateGroupsWithAccountRequest request) {request = beforeClientExecution(request);return executeAssociateSigninDelegateGroupsWithAccount(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public void addMultipleBlanks(MulBlankRecord mbr) {for (int j = 0; j < mbr.getNumColumns(); j++) {BlankRecord br = new BlankRecord();br.setColumn(( short ) (j + mbr.getFirstColumn()));br.setRow(mbr.getRow());br.setXFIndex(mbr.getXFAt(j));insertCell(br);}}",
+    "output": "public void AddMultipleBlanks(MulBlankRecord mbr){for (int j = 0; j < mbr.NumColumns; j++){BlankRecord br = new BlankRecord();br.Column = j + mbr.FirstColumn;br.Row = mbr.Row;br.XFIndex = (mbr.GetXFAt(j));InsertCell(br);}}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public void AddMultipleBlanks(MulBlankRecord mbr){for (int j = 0; j < mbr.NumColumns; j++){BlankRecord br = new BlankRecord();br.Column = j + mbr.FirstColumn;br.Row = mbr.Row;br.XFIndex = (mbr.GetXFAt(j));InsertCell(br);}}",
+    "output": "public void addMultipleBlanks(MulBlankRecord mbr) {for (int j = 0; j < mbr.getNumColumns(); j++) {BlankRecord br = new BlankRecord();br.setColumn(( short ) (j + mbr.getFirstColumn()));br.setRow(mbr.getRow());br.setXFIndex(mbr.getXFAt(j));insertCell(br);}}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public static String quote(String string) {StringBuilder sb = new StringBuilder();sb.append(\"\\\\Q\");int apos = 0;int k;while ((k = string.indexOf(\"\\\\E\", apos)) >= 0) {sb.append(string.substring(apos, k + 2)).append(\"\\\\\\\\E\\\\Q\");apos = k + 2;}return sb.append(string.substring(apos)).append(\"\\\\E\").toString();}",
+    "output": "public static string quote(string @string){java.lang.StringBuilder sb = new java.lang.StringBuilder();sb.append(\"\\\\Q\");int apos = 0;int k;while ((k = @string.IndexOf(\"\\\\E\", apos)) >= 0){sb.append(Sharpen.StringHelper.Substring(@string, apos, k + 2)).append(\"\\\\\\\\E\\\\Q\");apos = k + 2;}return sb.append(Sharpen.StringHelper.Substring(@string, apos)).append(\"\\\\E\").ToString();}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public static string quote(string @string){java.lang.StringBuilder sb = new java.lang.StringBuilder();sb.append(\"\\\\Q\");int apos = 0;int k;while ((k = @string.IndexOf(\"\\\\E\", apos)) >= 0){sb.append(Sharpen.StringHelper.Substring(@string, apos, k + 2)).append(\"\\\\\\\\E\\\\Q\");apos = k + 2;}return sb.append(Sharpen.StringHelper.Substring(@string, apos)).append(\"\\\\E\").ToString();}",
+    "output": "public static String quote(String string) {StringBuilder sb = new StringBuilder();sb.append(\"\\\\Q\");int apos = 0;int k;while ((k = string.indexOf(\"\\\\E\", apos)) >= 0) {sb.append(string.substring(apos, k + 2)).append(\"\\\\\\\\E\\\\Q\");apos = k + 2;}return sb.append(string.substring(apos)).append(\"\\\\E\").toString();}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public ByteBuffer putInt(int value) {throw new ReadOnlyBufferException();}",
+    "output": "public override java.nio.ByteBuffer putInt(int value){throw new java.nio.ReadOnlyBufferException();}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override java.nio.ByteBuffer putInt(int value){throw new java.nio.ReadOnlyBufferException();}",
+    "output": "public ByteBuffer putInt(int value) {throw new ReadOnlyBufferException();}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public ArrayPtg(Object[][] values2d) {int nColumns = values2d[0].length;int nRows = values2d.length;_nColumns = (short) nColumns;_nRows = (short) nRows;Object[] vv = new Object[_nColumns * _nRows];for (int r=0; r<nRows; r++) {Object[] rowData = values2d[r];for (int c=0; c<nColumns; c++) {vv[getValueIndex(c, r)] = rowData[c];}}_arrayValues = vv;_reserved0Int = 0;_reserved1Short = 0;_reserved2Byte = 0;}",
+    "output": "public ArrayPtg(Object[][] values2d){int nColumns = values2d[0].Length;int nRows = values2d.Length;_nColumns = (short)nColumns;_nRows = (short)nRows;Object[] vv = new Object[_nColumns * _nRows];for (int r = 0; r < nRows; r++){Object[] rowData = values2d[r];for (int c = 0; c < nColumns; c++){vv[GetValueIndex(c, r)] = rowData[c];}}_arrayValues = vv;_reserved0Int = 0;_reserved1Short = 0;_reserved2Byte = 0;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public ArrayPtg(Object[][] values2d){int nColumns = values2d[0].Length;int nRows = values2d.Length;_nColumns = (short)nColumns;_nRows = (short)nRows;Object[] vv = new Object[_nColumns * _nRows];for (int r = 0; r < nRows; r++){Object[] rowData = values2d[r];for (int c = 0; c < nColumns; c++){vv[GetValueIndex(c, r)] = rowData[c];}}_arrayValues = vv;_reserved0Int = 0;_reserved1Short = 0;_reserved2Byte = 0;}",
+    "output": "public ArrayPtg(Object[][] values2d) {int nColumns = values2d[0].length;int nRows = values2d.length;_nColumns = (short) nColumns;_nRows = (short) nRows;Object[] vv = new Object[_nColumns * _nRows];for (int r=0; r<nRows; r++) {Object[] rowData = values2d[r];for (int c=0; c<nColumns; c++) {vv[getValueIndex(c, r)] = rowData[c];}}_arrayValues = vv;_reserved0Int = 0;_reserved1Short = 0;_reserved2Byte = 0;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public GetIceServerConfigResult getIceServerConfig(GetIceServerConfigRequest request) {request = beforeClientExecution(request);return executeGetIceServerConfig(request);}",
+    "output": "public virtual GetIceServerConfigResponse GetIceServerConfig(GetIceServerConfigRequest request){var options = new InvokeOptions();options.RequestMarshaller = GetIceServerConfigRequestMarshaller.Instance;options.ResponseUnmarshaller = GetIceServerConfigResponseUnmarshaller.Instance;return Invoke<GetIceServerConfigResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual GetIceServerConfigResponse GetIceServerConfig(GetIceServerConfigRequest request){var options = new InvokeOptions();options.RequestMarshaller = GetIceServerConfigRequestMarshaller.Instance;options.ResponseUnmarshaller = GetIceServerConfigResponseUnmarshaller.Instance;return Invoke<GetIceServerConfigResponse>(request, options);}",
+    "output": "public GetIceServerConfigResult getIceServerConfig(GetIceServerConfigRequest request) {request = beforeClientExecution(request);return executeGetIceServerConfig(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public String toString() {return getClass().getName() + \" [\" +getValueAsString() +\"]\";}",
+    "output": "public override String ToString(){StringBuilder sb = new StringBuilder(64);sb.Append(GetType().Name).Append(\" [\");sb.Append(GetValueAsString());sb.Append(\"]\");return sb.ToString();}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override String ToString(){StringBuilder sb = new StringBuilder(64);sb.Append(GetType().Name).Append(\" [\");sb.Append(GetValueAsString());sb.Append(\"]\");return sb.ToString();}",
+    "output": "public String toString() {return getClass().getName() + \" [\" +getValueAsString() +\"]\";}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public String toString(String field) {return \"ToChildBlockJoinQuery (\"+parentQuery.toString()+\")\";}",
+    "output": "public override string ToString(string field){return \"ToChildBlockJoinQuery (\" + _parentQuery + \")\";}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override string ToString(string field){return \"ToChildBlockJoinQuery (\" + _parentQuery + \")\";}",
+    "output": "public String toString(String field) {return \"ToChildBlockJoinQuery (\"+parentQuery.toString()+\")\";}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public final void incRef() {refCount.incrementAndGet();}",
+    "output": "public void IncRef(){refCount.IncrementAndGet();}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public void IncRef(){refCount.IncrementAndGet();}",
+    "output": "public final void incRef() {refCount.incrementAndGet();}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public UpdateConfigurationSetSendingEnabledResult updateConfigurationSetSendingEnabled(UpdateConfigurationSetSendingEnabledRequest request) {request = beforeClientExecution(request);return executeUpdateConfigurationSetSendingEnabled(request);}",
+    "output": "public virtual UpdateConfigurationSetSendingEnabledResponse UpdateConfigurationSetSendingEnabled(UpdateConfigurationSetSendingEnabledRequest request){var options = new InvokeOptions();options.RequestMarshaller = UpdateConfigurationSetSendingEnabledRequestMarshaller.Instance;options.ResponseUnmarshaller = UpdateConfigurationSetSendingEnabledResponseUnmarshaller.Instance;return Invoke<UpdateConfigurationSetSendingEnabledResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual UpdateConfigurationSetSendingEnabledResponse UpdateConfigurationSetSendingEnabled(UpdateConfigurationSetSendingEnabledRequest request){var options = new InvokeOptions();options.RequestMarshaller = UpdateConfigurationSetSendingEnabledRequestMarshaller.Instance;options.ResponseUnmarshaller = UpdateConfigurationSetSendingEnabledResponseUnmarshaller.Instance;return Invoke<UpdateConfigurationSetSendingEnabledResponse>(request, options);}",
+    "output": "public UpdateConfigurationSetSendingEnabledResult updateConfigurationSetSendingEnabled(UpdateConfigurationSetSendingEnabledRequest request) {request = beforeClientExecution(request);return executeUpdateConfigurationSetSendingEnabled(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public int getNextXBATChainOffset() {return getXBATEntriesPerBlock() * LittleEndianConsts.INT_SIZE;}",
+    "output": "public int GetNextXBATChainOffset(){return GetXBATEntriesPerBlock() * LittleEndianConsts.INT_SIZE;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public int GetNextXBATChainOffset(){return GetXBATEntriesPerBlock() * LittleEndianConsts.INT_SIZE;}",
+    "output": "public int getNextXBATChainOffset() {return getXBATEntriesPerBlock() * LittleEndianConsts.INT_SIZE;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public void multiplyByPowerOfTen(int pow10) {TenPower tp = TenPower.getInstance(Math.abs(pow10));if (pow10 < 0) {mulShift(tp._divisor, tp._divisorShift);} else {mulShift(tp._multiplicand, tp._multiplierShift);}}",
+    "output": "public void multiplyByPowerOfTen(int pow10){TenPower tp = TenPower.GetInstance(Math.Abs(pow10));if (pow10 < 0){mulShift(tp._divisor, tp._divisorShift);}else{mulShift(tp._multiplicand, tp._multiplierShift);}}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public void multiplyByPowerOfTen(int pow10){TenPower tp = TenPower.GetInstance(Math.Abs(pow10));if (pow10 < 0){mulShift(tp._divisor, tp._divisorShift);}else{mulShift(tp._multiplicand, tp._multiplierShift);}}",
+    "output": "public void multiplyByPowerOfTen(int pow10) {TenPower tp = TenPower.getInstance(Math.abs(pow10));if (pow10 < 0) {mulShift(tp._divisor, tp._divisorShift);} else {mulShift(tp._multiplicand, tp._multiplierShift);}}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public String toString(){final StringBuilder b = new StringBuilder();final int          l = length();b.append(File.separatorChar);for (int i = 0; i < l; i++){b.append(getComponent(i));if (i < l - 1){b.append(File.separatorChar);}}return b.toString();}",
+    "output": "public override string ToString(){StringBuilder builder = new StringBuilder();int length = this.Length;builder.Append(Path.DirectorySeparatorChar);for (int i = 0; i < length; i++){builder.Append(this.GetComponent(i));if (i < (length - 1)){builder.Append(Path.DirectorySeparatorChar);}}return builder.ToString();}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override string ToString(){StringBuilder builder = new StringBuilder();int length = this.Length;builder.Append(Path.DirectorySeparatorChar);for (int i = 0; i < length; i++){builder.Append(this.GetComponent(i));if (i < (length - 1)){builder.Append(Path.DirectorySeparatorChar);}}return builder.ToString();}",
+    "output": "public String toString(){final StringBuilder b = new StringBuilder();final int          l = length();b.append(File.separatorChar);for (int i = 0; i < l; i++){b.append(getComponent(i));if (i < l - 1){b.append(File.separatorChar);}}return b.toString();}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public InstanceProfileCredentialsProvider withFetcher(ECSMetadataServiceCredentialsFetcher fetcher) {this.fetcher = fetcher;this.fetcher.setRoleName(roleName);return this;}",
+    "output": "public void withFetcher(ECSMetadataServiceCredentialsFetcher fetcher){this.fetcher = fetcher;this.fetcher.SetRoleName(roleName);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public void withFetcher(ECSMetadataServiceCredentialsFetcher fetcher){this.fetcher = fetcher;this.fetcher.SetRoleName(roleName);}",
+    "output": "public InstanceProfileCredentialsProvider withFetcher(ECSMetadataServiceCredentialsFetcher fetcher) {this.fetcher = fetcher;this.fetcher.setRoleName(roleName);return this;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public void setProgressMonitor(ProgressMonitor pm) {progressMonitor = pm;}",
+    "output": "public virtual void SetProgressMonitor(ProgressMonitor pm){progressMonitor = pm;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual void SetProgressMonitor(ProgressMonitor pm){progressMonitor = pm;}",
+    "output": "public void setProgressMonitor(ProgressMonitor pm) {progressMonitor = pm;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public void reset() {if (!first()) {ptr = 0;if (!eof())parseEntry();}}",
+    "output": "public override void Reset(){if (!First){ptr = 0;if (!Eof){ParseEntry();}}}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override void Reset(){if (!First){ptr = 0;if (!Eof){ParseEntry();}}}",
+    "output": "public void reset() {if (!first()) {ptr = 0;if (!eof())parseEntry();}}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public E previous() {if (iterator.previousIndex() >= start) {return iterator.previous();}throw new NoSuchElementException();}",
+    "output": "public E previous(){if (iterator.previousIndex() >= start){return iterator.previous();}throw new java.util.NoSuchElementException();}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public E previous(){if (iterator.previousIndex() >= start){return iterator.previous();}throw new java.util.NoSuchElementException();}",
+    "output": "public E previous() {if (iterator.previousIndex() >= start) {return iterator.previous();}throw new NoSuchElementException();}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public String getNewPrefix() {return this.newPrefix;}",
+    "output": "public virtual string GetNewPrefix(){return this.newPrefix;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual string GetNewPrefix(){return this.newPrefix;}",
+    "output": "public String getNewPrefix() {return this.newPrefix;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public int indexOfValue(int value) {for (int i = 0; i < mSize; i++)if (mValues[i] == value)return i;return -1;}",
+    "output": "public virtual int indexOfValue(int value){{for (int i = 0; i < mSize; i++){if (mValues[i] == value){return i;}}}return -1;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual int indexOfValue(int value){{for (int i = 0; i < mSize; i++){if (mValues[i] == value){return i;}}}return -1;}",
+    "output": "public int indexOfValue(int value) {for (int i = 0; i < mSize; i++)if (mValues[i] == value)return i;return -1;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public List<CharsRef> uniqueStems(char word[], int length) {List<CharsRef> stems = stem(word, length);if (stems.size() < 2) {return stems;}CharArraySet terms = new CharArraySet(8, dictionary.ignoreCase);List<CharsRef> deduped = new ArrayList<>();for (CharsRef s : stems) {if (!terms.contains(s)) {deduped.add(s);terms.add(s);}}return deduped;}",
+    "output": "public IList<CharsRef> UniqueStems(char[] word, int length){IList<CharsRef> stems = Stem(word, length);if (stems.Count < 2){return stems;}CharArraySet terms = new CharArraySet(LuceneVersion.LUCENE_CURRENT, 8, dictionary.ignoreCase); IList<CharsRef> deduped = new List<CharsRef>();foreach (CharsRef s in stems){if (!terms.Contains(s)){deduped.Add(s);terms.Add(s);}}return deduped;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public IList<CharsRef> UniqueStems(char[] word, int length){IList<CharsRef> stems = Stem(word, length);if (stems.Count < 2){return stems;}CharArraySet terms = new CharArraySet(LuceneVersion.LUCENE_CURRENT, 8, dictionary.ignoreCase); IList<CharsRef> deduped = new List<CharsRef>();foreach (CharsRef s in stems){if (!terms.Contains(s)){deduped.Add(s);terms.Add(s);}}return deduped;}",
+    "output": "public List<CharsRef> uniqueStems(char word[], int length) {List<CharsRef> stems = stem(word, length);if (stems.size() < 2) {return stems;}CharArraySet terms = new CharArraySet(8, dictionary.ignoreCase);List<CharsRef> deduped = new ArrayList<>();for (CharsRef s : stems) {if (!terms.contains(s)) {deduped.add(s);terms.add(s);}}return deduped;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public GetGatewayResponsesResult getGatewayResponses(GetGatewayResponsesRequest request) {request = beforeClientExecution(request);return executeGetGatewayResponses(request);}",
+    "output": "public virtual GetGatewayResponsesResponse GetGatewayResponses(GetGatewayResponsesRequest request){var options = new InvokeOptions();options.RequestMarshaller = GetGatewayResponsesRequestMarshaller.Instance;options.ResponseUnmarshaller = GetGatewayResponsesResponseUnmarshaller.Instance;return Invoke<GetGatewayResponsesResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual GetGatewayResponsesResponse GetGatewayResponses(GetGatewayResponsesRequest request){var options = new InvokeOptions();options.RequestMarshaller = GetGatewayResponsesRequestMarshaller.Instance;options.ResponseUnmarshaller = GetGatewayResponsesResponseUnmarshaller.Instance;return Invoke<GetGatewayResponsesResponse>(request, options);}",
+    "output": "public GetGatewayResponsesResult getGatewayResponses(GetGatewayResponsesRequest request) {request = beforeClientExecution(request);return executeGetGatewayResponses(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public void setPosition(long pos) {currentBlockIndex = (int) (pos >> blockBits);currentBlock = blocks[currentBlockIndex];currentBlockUpto = (int) (pos & blockMask);}",
+    "output": "public void SetPosition(long position){currentBlockIndex = (int)(position >> outerInstance.blockBits);currentBlock = outerInstance.blocks[currentBlockIndex];currentBlockUpto = (int)(position & outerInstance.blockMask);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public void SetPosition(long position){currentBlockIndex = (int)(position >> outerInstance.blockBits);currentBlock = outerInstance.blocks[currentBlockIndex];currentBlockUpto = (int)(position & outerInstance.blockMask);}",
+    "output": "public void setPosition(long pos) {currentBlockIndex = (int) (pos >> blockBits);currentBlock = blocks[currentBlockIndex];currentBlockUpto = (int) (pos & blockMask);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public long skip(long n) {int s = (int) Math.min(available(), Math.max(0, n));ptr += s;return s;}",
+    "output": "public override long Skip(long n){int s = (int)Math.Min(Available(), Math.Max(0, n));ptr += s;return s;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override long Skip(long n){int s = (int)Math.Min(Available(), Math.Max(0, n));ptr += s;return s;}",
+    "output": "public long skip(long n) {int s = (int) Math.min(available(), Math.max(0, n));ptr += s;return s;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public BootstrapActionDetail(BootstrapActionConfig bootstrapActionConfig) {setBootstrapActionConfig(bootstrapActionConfig);}",
+    "output": "public BootstrapActionDetail(BootstrapActionConfig bootstrapActionConfig){_bootstrapActionConfig = bootstrapActionConfig;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public BootstrapActionDetail(BootstrapActionConfig bootstrapActionConfig){_bootstrapActionConfig = bootstrapActionConfig;}",
+    "output": "public BootstrapActionDetail(BootstrapActionConfig bootstrapActionConfig) {setBootstrapActionConfig(bootstrapActionConfig);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public void serialize(LittleEndianOutput out) {out.writeShort(field_1_row);out.writeShort(field_2_col);out.writeShort(field_3_flags);out.writeShort(field_4_shapeid);out.writeShort(field_6_author.length());out.writeByte(field_5_hasMultibyte ? 0x01 : 0x00);if (field_5_hasMultibyte) {StringUtil.putUnicodeLE(field_6_author, out);} else {StringUtil.putCompressedUnicode(field_6_author, out);}if (field_7_padding != null) {out.writeByte(field_7_padding.intValue());}}",
+    "output": "public override void Serialize(ILittleEndianOutput out1){out1.WriteShort(field_1_row);out1.WriteShort(field_2_col);out1.WriteShort(field_3_flags);out1.WriteShort(field_4_shapeid);out1.WriteShort(field_6_author.Length);out1.WriteByte(field_5_hasMultibyte ? 0x01 : 0x00);if (field_5_hasMultibyte) {StringUtil.PutUnicodeLE(field_6_author, out1);} else {StringUtil.PutCompressedUnicode(field_6_author, out1);}if (field_7_padding != null) {out1.WriteByte(Convert.ToInt32(field_7_padding, CultureInfo.InvariantCulture));}}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override void Serialize(ILittleEndianOutput out1){out1.WriteShort(field_1_row);out1.WriteShort(field_2_col);out1.WriteShort(field_3_flags);out1.WriteShort(field_4_shapeid);out1.WriteShort(field_6_author.Length);out1.WriteByte(field_5_hasMultibyte ? 0x01 : 0x00);if (field_5_hasMultibyte) {StringUtil.PutUnicodeLE(field_6_author, out1);} else {StringUtil.PutCompressedUnicode(field_6_author, out1);}if (field_7_padding != null) {out1.WriteByte(Convert.ToInt32(field_7_padding, CultureInfo.InvariantCulture));}}",
+    "output": "public void serialize(LittleEndianOutput out) {out.writeShort(field_1_row);out.writeShort(field_2_col);out.writeShort(field_3_flags);out.writeShort(field_4_shapeid);out.writeShort(field_6_author.length());out.writeByte(field_5_hasMultibyte ? 0x01 : 0x00);if (field_5_hasMultibyte) {StringUtil.putUnicodeLE(field_6_author, out);} else {StringUtil.putCompressedUnicode(field_6_author, out);}if (field_7_padding != null) {out.writeByte(field_7_padding.intValue());}}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public int lastIndexOf(String string) {return lastIndexOf(string, count);}",
+    "output": "public virtual int lastIndexOf(string @string){return lastIndexOf(@string, count);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual int lastIndexOf(string @string){return lastIndexOf(@string, count);}",
+    "output": "public int lastIndexOf(String string) {return lastIndexOf(string, count);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public boolean add(E object) {return addLastImpl(object);}",
+    "output": "public override bool add(E @object){return addLastImpl(@object);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override bool add(E @object){return addLastImpl(@object);}",
+    "output": "public boolean add(E object) {return addLastImpl(object);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public void unsetSection(String section, String subsection) {ConfigSnapshot src, res;do {src = state.get();res = unsetSection(src, section, subsection);} while (!state.compareAndSet(src, res));}",
+    "output": "public virtual void UnsetSection(string section, string subsection){ConfigSnapshot src;ConfigSnapshot res;do{src = state.Get();res = UnsetSection(src, section, subsection);}while (!state.CompareAndSet(src, res));}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual void UnsetSection(string section, string subsection){ConfigSnapshot src;ConfigSnapshot res;do{src = state.Get();res = UnsetSection(src, section, subsection);}while (!state.CompareAndSet(src, res));}",
+    "output": "public void unsetSection(String section, String subsection) {ConfigSnapshot src, res;do {src = state.get();res = unsetSection(src, section, subsection);} while (!state.compareAndSet(src, res));}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public final String getTagName() {return tagName;}",
+    "output": "public string GetTagName(){return tagName;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public string GetTagName(){return tagName;}",
+    "output": "public final String getTagName() {return tagName;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public void addSubRecord(int index, SubRecord element) {subrecords.add(index, element);}",
+    "output": "public void AddSubRecord(int index, SubRecord element){subrecords.Insert(index, element);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public void AddSubRecord(int index, SubRecord element){subrecords.Insert(index, element);}",
+    "output": "public void addSubRecord(int index, SubRecord element) {subrecords.add(index, element);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public boolean remove(Object o) {synchronized (mutex) {return delegate().remove(o);}}",
+    "output": "public virtual bool remove(object @object){lock (mutex){return c.remove(@object);}}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual bool remove(object @object){lock (mutex){return c.remove(@object);}}",
+    "output": "public boolean remove(Object o) {synchronized (mutex) {return delegate().remove(o);}}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public DoubleMetaphoneFilter create(TokenStream input) {return new DoubleMetaphoneFilter(input, maxCodeLength, inject);}",
+    "output": "public override TokenStream Create(TokenStream input){return new DoubleMetaphoneFilter(input, maxCodeLength, inject);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override TokenStream Create(TokenStream input){return new DoubleMetaphoneFilter(input, maxCodeLength, inject);}",
+    "output": "public DoubleMetaphoneFilter create(TokenStream input) {return new DoubleMetaphoneFilter(input, maxCodeLength, inject);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public long length() {return inCoreLength();}",
+    "output": "public virtual long Length(){return InCoreLength();}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual long Length(){return InCoreLength();}",
+    "output": "public long length() {return inCoreLength();}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public void setValue(boolean newValue) {value = newValue;}",
+    "output": "public virtual void SetValue(bool newValue){value = newValue;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual void SetValue(bool newValue){value = newValue;}",
+    "output": "public void setValue(boolean newValue) {value = newValue;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public Pair(ContentSource oldSource, ContentSource newSource) {this.oldSource = oldSource;this.newSource = newSource;}",
+    "output": "public Pair(ContentSource oldSource, ContentSource newSource){this.oldSource = oldSource;this.newSource = newSource;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public Pair(ContentSource oldSource, ContentSource newSource){this.oldSource = oldSource;this.newSource = newSource;}",
+    "output": "public Pair(ContentSource oldSource, ContentSource newSource) {this.oldSource = oldSource;this.newSource = newSource;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public int get(int i) {if (count <= i)throw new ArrayIndexOutOfBoundsException(i);return entries[i];}",
+    "output": "public virtual int Get(int i){if (count <= i){throw Sharpen.Extensions.CreateIndexOutOfRangeException(i);}return entries[i];}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual int Get(int i){if (count <= i){throw Sharpen.Extensions.CreateIndexOutOfRangeException(i);}return entries[i];}",
+    "output": "public int get(int i) {if (count <= i)throw new ArrayIndexOutOfBoundsException(i);return entries[i];}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public CreateRepoRequest() {super(\"cr\", \"2016-06-07\", \"CreateRepo\", \"cr\");setUriPattern(\"/repos\");setMethod(MethodType.PUT);}",
+    "output": "public CreateRepoRequest(): base(\"cr\", \"2016-06-07\", \"CreateRepo\", \"cr\", \"openAPI\"){UriPattern = \"/repos\";Method = MethodType.PUT;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public CreateRepoRequest(): base(\"cr\", \"2016-06-07\", \"CreateRepo\", \"cr\", \"openAPI\"){UriPattern = \"/repos\";Method = MethodType.PUT;}",
+    "output": "public CreateRepoRequest() {super(\"cr\", \"2016-06-07\", \"CreateRepo\", \"cr\");setUriPattern(\"/repos\");setMethod(MethodType.PUT);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public boolean isDeltaBaseAsOffset() {return deltaBaseAsOffset;}",
+    "output": "public virtual bool IsDeltaBaseAsOffset(){return deltaBaseAsOffset;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual bool IsDeltaBaseAsOffset(){return deltaBaseAsOffset;}",
+    "output": "public boolean isDeltaBaseAsOffset() {return deltaBaseAsOffset;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public void remove() {if (expectedModCount == list.modCount) {if (lastLink != null) {Link<ET> next = lastLink.next;Link<ET> previous = lastLink.previous;next.previous = previous;previous.next = next;if (lastLink == link) {pos--;}link = previous;lastLink = null;expectedModCount++;list.size--;list.modCount++;} else {throw new IllegalStateException();}} else {throw new ConcurrentModificationException();}}",
+    "output": "public void remove(){if (expectedModCount == list.modCount){if (lastLink != null){java.util.LinkedList.Link<ET> next_1 = lastLink.next;java.util.LinkedList.Link<ET> previous_1 = lastLink.previous;next_1.previous = previous_1;previous_1.next = next_1;if (lastLink == link){pos--;}link = previous_1;lastLink = null;expectedModCount++;list._size--;list.modCount++;}else{throw new System.InvalidOperationException();}}else{throw new java.util.ConcurrentModificationException();}}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public void remove(){if (expectedModCount == list.modCount){if (lastLink != null){java.util.LinkedList.Link<ET> next_1 = lastLink.next;java.util.LinkedList.Link<ET> previous_1 = lastLink.previous;next_1.previous = previous_1;previous_1.next = next_1;if (lastLink == link){pos--;}link = previous_1;lastLink = null;expectedModCount++;list._size--;list.modCount++;}else{throw new System.InvalidOperationException();}}else{throw new java.util.ConcurrentModificationException();}}",
+    "output": "public void remove() {if (expectedModCount == list.modCount) {if (lastLink != null) {Link<ET> next = lastLink.next;Link<ET> previous = lastLink.previous;next.previous = previous;previous.next = next;if (lastLink == link) {pos--;}link = previous;lastLink = null;expectedModCount++;list.size--;list.modCount++;} else {throw new IllegalStateException();}} else {throw new ConcurrentModificationException();}}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public MergeShardsResult mergeShards(MergeShardsRequest request) {request = beforeClientExecution(request);return executeMergeShards(request);}",
+    "output": "public virtual MergeShardsResponse MergeShards(MergeShardsRequest request){var options = new InvokeOptions();options.RequestMarshaller = MergeShardsRequestMarshaller.Instance;options.ResponseUnmarshaller = MergeShardsResponseUnmarshaller.Instance;return Invoke<MergeShardsResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual MergeShardsResponse MergeShards(MergeShardsRequest request){var options = new InvokeOptions();options.RequestMarshaller = MergeShardsRequestMarshaller.Instance;options.ResponseUnmarshaller = MergeShardsResponseUnmarshaller.Instance;return Invoke<MergeShardsResponse>(request, options);}",
+    "output": "public MergeShardsResult mergeShards(MergeShardsRequest request) {request = beforeClientExecution(request);return executeMergeShards(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public AllocateHostedConnectionResult allocateHostedConnection(AllocateHostedConnectionRequest request) {request = beforeClientExecution(request);return executeAllocateHostedConnection(request);}",
+    "output": "public virtual AllocateHostedConnectionResponse AllocateHostedConnection(AllocateHostedConnectionRequest request){var options = new InvokeOptions();options.RequestMarshaller = AllocateHostedConnectionRequestMarshaller.Instance;options.ResponseUnmarshaller = AllocateHostedConnectionResponseUnmarshaller.Instance;return Invoke<AllocateHostedConnectionResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual AllocateHostedConnectionResponse AllocateHostedConnection(AllocateHostedConnectionRequest request){var options = new InvokeOptions();options.RequestMarshaller = AllocateHostedConnectionRequestMarshaller.Instance;options.ResponseUnmarshaller = AllocateHostedConnectionResponseUnmarshaller.Instance;return Invoke<AllocateHostedConnectionResponse>(request, options);}",
+    "output": "public AllocateHostedConnectionResult allocateHostedConnection(AllocateHostedConnectionRequest request) {request = beforeClientExecution(request);return executeAllocateHostedConnection(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public int getBeginIndex() {return start;}",
+    "output": "public int getBeginIndex(){return start;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public int getBeginIndex(){return start;}",
+    "output": "public int getBeginIndex() {return start;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public static final WeightedTerm[] getTerms(Query query){return getTerms(query,false);}",
+    "output": "public static WeightedTerm[] GetTerms(Query query){return GetTerms(query, false);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public static WeightedTerm[] GetTerms(Query query){return GetTerms(query, false);}",
+    "output": "public static final WeightedTerm[] getTerms(Query query){return getTerms(query,false);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public ByteBuffer compact() {throw new ReadOnlyBufferException();}",
+    "output": "public override java.nio.ByteBuffer compact(){throw new java.nio.ReadOnlyBufferException();}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override java.nio.ByteBuffer compact(){throw new java.nio.ReadOnlyBufferException();}",
+    "output": "public ByteBuffer compact() {throw new ReadOnlyBufferException();}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public void decode(byte[] blocks, int blocksOffset, long[] values, int valuesOffset, int iterations) {for (int i = 0; i < iterations; ++i) {final long byte0 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = byte0 >>> 2;final long byte1 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = ((byte0 & 3) << 4) | (byte1 >>> 4);final long byte2 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = ((byte1 & 15) << 2) | (byte2 >>> 6);values[valuesOffset++] = byte2 & 63;}}",
+    "output": "public override void Decode(byte[] blocks, int blocksOffset, int[] values, int valuesOffset, int iterations){for (int i = 0; i < iterations; ++i){int byte0 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = (int)((uint)byte0 >> 2);int byte1 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = ((byte0 & 3) << 4) | ((int)((uint)byte1 >> 4));int byte2 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = ((byte1 & 15) << 2) | ((int)((uint)byte2 >> 6));values[valuesOffset++] = byte2 & 63;}}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override void Decode(byte[] blocks, int blocksOffset, int[] values, int valuesOffset, int iterations){for (int i = 0; i < iterations; ++i){int byte0 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = (int)((uint)byte0 >> 2);int byte1 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = ((byte0 & 3) << 4) | ((int)((uint)byte1 >> 4));int byte2 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = ((byte1 & 15) << 2) | ((int)((uint)byte2 >> 6));values[valuesOffset++] = byte2 & 63;}}",
+    "output": "public void decode(byte[] blocks, int blocksOffset, long[] values, int valuesOffset, int iterations) {for (int i = 0; i < iterations; ++i) {final long byte0 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = byte0 >>> 2;final long byte1 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = ((byte0 & 3) << 4) | (byte1 >>> 4);final long byte2 = blocks[blocksOffset++] & 0xFF;values[valuesOffset++] = ((byte1 & 15) << 2) | (byte2 >>> 6);values[valuesOffset++] = byte2 & 63;}}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public String getHumanishName() throws IllegalArgumentException {String s = getPath();if (\"/\".equals(s) || \"\".equals(s)) s = getHost();if (s == null) throw new IllegalArgumentException();String[] elements;if (\"file\".equals(scheme) || LOCAL_FILE.matcher(s).matches()) elements = s.split(\"[\\\\\" + File.separatorChar + \"/]\"); elseelements = s.split(\"/+\"); if (elements.length == 0)throw new IllegalArgumentException();String result = elements[elements.length - 1];if (Constants.DOT_GIT.equals(result))result = elements[elements.length - 2];else if (result.endsWith(Constants.DOT_GIT_EXT))result = result.substring(0, result.length()- Constants.DOT_GIT_EXT.length());return result;}",
+    "output": "public virtual string GetHumanishName(){if (string.Empty.Equals(GetPath()) || GetPath() == null){throw new ArgumentException();}string s = GetPath();string[] elements;if (\"file\".Equals(scheme) || LOCAL_FILE.Matcher(s).Matches()){elements = s.Split(\"[\\\\\" + FilePath.separatorChar + \"/]\");}else{elements = s.Split(\"/\");}if (elements.Length == 0){throw new ArgumentException();}string result = elements[elements.Length - 1];if (Constants.DOT_GIT.Equals(result)){result = elements[elements.Length - 2];}else{if (result.EndsWith(Constants.DOT_GIT_EXT)){result = Sharpen.Runtime.Substring(result, 0, result.Length - Constants.DOT_GIT_EXT.Length);}}return result;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual string GetHumanishName(){if (string.Empty.Equals(GetPath()) || GetPath() == null){throw new ArgumentException();}string s = GetPath();string[] elements;if (\"file\".Equals(scheme) || LOCAL_FILE.Matcher(s).Matches()){elements = s.Split(\"[\\\\\" + FilePath.separatorChar + \"/]\");}else{elements = s.Split(\"/\");}if (elements.Length == 0){throw new ArgumentException();}string result = elements[elements.Length - 1];if (Constants.DOT_GIT.Equals(result)){result = elements[elements.Length - 2];}else{if (result.EndsWith(Constants.DOT_GIT_EXT)){result = Sharpen.Runtime.Substring(result, 0, result.Length - Constants.DOT_GIT_EXT.Length);}}return result;}",
+    "output": "public String getHumanishName() throws IllegalArgumentException {String s = getPath();if (\"/\".equals(s) || \"\".equals(s)) s = getHost();if (s == null) throw new IllegalArgumentException();String[] elements;if (\"file\".equals(scheme) || LOCAL_FILE.matcher(s).matches()) elements = s.split(\"[\\\\\" + File.separatorChar + \"/]\"); elseelements = s.split(\"/+\"); if (elements.length == 0)throw new IllegalArgumentException();String result = elements[elements.length - 1];if (Constants.DOT_GIT.equals(result))result = elements[elements.length - 2];else if (result.endsWith(Constants.DOT_GIT_EXT))result = result.substring(0, result.length()- Constants.DOT_GIT_EXT.length());return result;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public DescribeNotebookInstanceLifecycleConfigResult describeNotebookInstanceLifecycleConfig(DescribeNotebookInstanceLifecycleConfigRequest request) {request = beforeClientExecution(request);return executeDescribeNotebookInstanceLifecycleConfig(request);}",
+    "output": "public virtual DescribeNotebookInstanceLifecycleConfigResponse DescribeNotebookInstanceLifecycleConfig(DescribeNotebookInstanceLifecycleConfigRequest request){var options = new InvokeOptions();options.RequestMarshaller = DescribeNotebookInstanceLifecycleConfigRequestMarshaller.Instance;options.ResponseUnmarshaller = DescribeNotebookInstanceLifecycleConfigResponseUnmarshaller.Instance;return Invoke<DescribeNotebookInstanceLifecycleConfigResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual DescribeNotebookInstanceLifecycleConfigResponse DescribeNotebookInstanceLifecycleConfig(DescribeNotebookInstanceLifecycleConfigRequest request){var options = new InvokeOptions();options.RequestMarshaller = DescribeNotebookInstanceLifecycleConfigRequestMarshaller.Instance;options.ResponseUnmarshaller = DescribeNotebookInstanceLifecycleConfigResponseUnmarshaller.Instance;return Invoke<DescribeNotebookInstanceLifecycleConfigResponse>(request, options);}",
+    "output": "public DescribeNotebookInstanceLifecycleConfigResult describeNotebookInstanceLifecycleConfig(DescribeNotebookInstanceLifecycleConfigRequest request) {request = beforeClientExecution(request);return executeDescribeNotebookInstanceLifecycleConfig(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public String getAccessKeySecret() {return this.accessKeySecret;}",
+    "output": "public string GetAccessKeySecret(){return AccessSecret;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public string GetAccessKeySecret(){return AccessSecret;}",
+    "output": "public String getAccessKeySecret() {return this.accessKeySecret;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public CreateVpnConnectionResult createVpnConnection(CreateVpnConnectionRequest request) {request = beforeClientExecution(request);return executeCreateVpnConnection(request);}",
+    "output": "public virtual CreateVpnConnectionResponse CreateVpnConnection(CreateVpnConnectionRequest request){var options = new InvokeOptions();options.RequestMarshaller = CreateVpnConnectionRequestMarshaller.Instance;options.ResponseUnmarshaller = CreateVpnConnectionResponseUnmarshaller.Instance;return Invoke<CreateVpnConnectionResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual CreateVpnConnectionResponse CreateVpnConnection(CreateVpnConnectionRequest request){var options = new InvokeOptions();options.RequestMarshaller = CreateVpnConnectionRequestMarshaller.Instance;options.ResponseUnmarshaller = CreateVpnConnectionResponseUnmarshaller.Instance;return Invoke<CreateVpnConnectionResponse>(request, options);}",
+    "output": "public CreateVpnConnectionResult createVpnConnection(CreateVpnConnectionRequest request) {request = beforeClientExecution(request);return executeCreateVpnConnection(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public DescribeVoicesResult describeVoices(DescribeVoicesRequest request) {request = beforeClientExecution(request);return executeDescribeVoices(request);}",
+    "output": "public virtual DescribeVoicesResponse DescribeVoices(DescribeVoicesRequest request){var options = new InvokeOptions();options.RequestMarshaller = DescribeVoicesRequestMarshaller.Instance;options.ResponseUnmarshaller = DescribeVoicesResponseUnmarshaller.Instance;return Invoke<DescribeVoicesResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual DescribeVoicesResponse DescribeVoices(DescribeVoicesRequest request){var options = new InvokeOptions();options.RequestMarshaller = DescribeVoicesRequestMarshaller.Instance;options.ResponseUnmarshaller = DescribeVoicesResponseUnmarshaller.Instance;return Invoke<DescribeVoicesResponse>(request, options);}",
+    "output": "public DescribeVoicesResult describeVoices(DescribeVoicesRequest request) {request = beforeClientExecution(request);return executeDescribeVoices(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public ListMonitoringExecutionsResult listMonitoringExecutions(ListMonitoringExecutionsRequest request) {request = beforeClientExecution(request);return executeListMonitoringExecutions(request);}",
+    "output": "public virtual ListMonitoringExecutionsResponse ListMonitoringExecutions(ListMonitoringExecutionsRequest request){var options = new InvokeOptions();options.RequestMarshaller = ListMonitoringExecutionsRequestMarshaller.Instance;options.ResponseUnmarshaller = ListMonitoringExecutionsResponseUnmarshaller.Instance;return Invoke<ListMonitoringExecutionsResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual ListMonitoringExecutionsResponse ListMonitoringExecutions(ListMonitoringExecutionsRequest request){var options = new InvokeOptions();options.RequestMarshaller = ListMonitoringExecutionsRequestMarshaller.Instance;options.ResponseUnmarshaller = ListMonitoringExecutionsResponseUnmarshaller.Instance;return Invoke<ListMonitoringExecutionsResponse>(request, options);}",
+    "output": "public ListMonitoringExecutionsResult listMonitoringExecutions(ListMonitoringExecutionsRequest request) {request = beforeClientExecution(request);return executeListMonitoringExecutions(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public DescribeJobRequest(String vaultName, String jobId) {setVaultName(vaultName);setJobId(jobId);}",
+    "output": "public DescribeJobRequest(string vaultName, string jobId){_vaultName = vaultName;_jobId = jobId;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public DescribeJobRequest(string vaultName, string jobId){_vaultName = vaultName;_jobId = jobId;}",
+    "output": "public DescribeJobRequest(String vaultName, String jobId) {setVaultName(vaultName);setJobId(jobId);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public EscherRecord getEscherRecord(int index){return escherRecords.get(index);}",
+    "output": "public EscherRecord GetEscherRecord(int index){return escherRecords[index];}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public EscherRecord GetEscherRecord(int index){return escherRecords[index];}",
+    "output": "public EscherRecord getEscherRecord(int index){return escherRecords.get(index);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public GetApisResult getApis(GetApisRequest request) {request = beforeClientExecution(request);return executeGetApis(request);}",
+    "output": "public virtual GetApisResponse GetApis(GetApisRequest request){var options = new InvokeOptions();options.RequestMarshaller = GetApisRequestMarshaller.Instance;options.ResponseUnmarshaller = GetApisResponseUnmarshaller.Instance;return Invoke<GetApisResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual GetApisResponse GetApis(GetApisRequest request){var options = new InvokeOptions();options.RequestMarshaller = GetApisRequestMarshaller.Instance;options.ResponseUnmarshaller = GetApisResponseUnmarshaller.Instance;return Invoke<GetApisResponse>(request, options);}",
+    "output": "public GetApisResult getApis(GetApisRequest request) {request = beforeClientExecution(request);return executeGetApis(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public DeleteSmsChannelResult deleteSmsChannel(DeleteSmsChannelRequest request) {request = beforeClientExecution(request);return executeDeleteSmsChannel(request);}",
+    "output": "public virtual DeleteSmsChannelResponse DeleteSmsChannel(DeleteSmsChannelRequest request){var options = new InvokeOptions();options.RequestMarshaller = DeleteSmsChannelRequestMarshaller.Instance;options.ResponseUnmarshaller = DeleteSmsChannelResponseUnmarshaller.Instance;return Invoke<DeleteSmsChannelResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual DeleteSmsChannelResponse DeleteSmsChannel(DeleteSmsChannelRequest request){var options = new InvokeOptions();options.RequestMarshaller = DeleteSmsChannelRequestMarshaller.Instance;options.ResponseUnmarshaller = DeleteSmsChannelResponseUnmarshaller.Instance;return Invoke<DeleteSmsChannelResponse>(request, options);}",
+    "output": "public DeleteSmsChannelResult deleteSmsChannel(DeleteSmsChannelRequest request) {request = beforeClientExecution(request);return executeDeleteSmsChannel(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public TrackingRefUpdate getTrackingRefUpdate() {return trackingRefUpdate;}",
+    "output": "public virtual TrackingRefUpdate GetTrackingRefUpdate(){return trackingRefUpdate;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual TrackingRefUpdate GetTrackingRefUpdate(){return trackingRefUpdate;}",
+    "output": "public TrackingRefUpdate getTrackingRefUpdate() {return trackingRefUpdate;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public void print(boolean b) {print(String.valueOf(b));}",
+    "output": "public virtual void print(bool b){print(b.ToString());}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual void print(bool b){print(b.ToString());}",
+    "output": "public void print(boolean b) {print(String.valueOf(b));}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public QueryNode getChild() {return getChildren().get(0);}",
+    "output": "public virtual IQueryNode GetChild(){return GetChildren()[0];}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual IQueryNode GetChild(){return GetChildren()[0];}",
+    "output": "public QueryNode getChild() {return getChildren().get(0);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public NotIgnoredFilter(int workdirTreeIndex) {this.index = workdirTreeIndex;}",
+    "output": "public NotIgnoredFilter(int workdirTreeIndex){this.index = workdirTreeIndex;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public NotIgnoredFilter(int workdirTreeIndex){this.index = workdirTreeIndex;}",
+    "output": "public NotIgnoredFilter(int workdirTreeIndex) {this.index = workdirTreeIndex;}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public AreaRecord(RecordInputStream in) {field_1_formatFlags            = in.readShort();}",
+    "output": "public AreaRecord(RecordInputStream in1){field_1_formatFlags = in1.ReadShort();}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public AreaRecord(RecordInputStream in1){field_1_formatFlags = in1.ReadShort();}",
+    "output": "public AreaRecord(RecordInputStream in) {field_1_formatFlags            = in.readShort();}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public GetThumbnailRequest() {super(\"CloudPhoto\", \"2017-07-11\", \"GetThumbnail\", \"cloudphoto\");setProtocol(ProtocolType.HTTPS);}",
+    "output": "public GetThumbnailRequest(): base(\"CloudPhoto\", \"2017-07-11\", \"GetThumbnail\", \"cloudphoto\", \"openAPI\"){Protocol = ProtocolType.HTTPS;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public GetThumbnailRequest(): base(\"CloudPhoto\", \"2017-07-11\", \"GetThumbnail\", \"cloudphoto\", \"openAPI\"){Protocol = ProtocolType.HTTPS;}",
+    "output": "public GetThumbnailRequest() {super(\"CloudPhoto\", \"2017-07-11\", \"GetThumbnail\", \"cloudphoto\");setProtocol(ProtocolType.HTTPS);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public DescribeTransitGatewayVpcAttachmentsResult describeTransitGatewayVpcAttachments(DescribeTransitGatewayVpcAttachmentsRequest request) {request = beforeClientExecution(request);return executeDescribeTransitGatewayVpcAttachments(request);}",
+    "output": "public virtual DescribeTransitGatewayVpcAttachmentsResponse DescribeTransitGatewayVpcAttachments(DescribeTransitGatewayVpcAttachmentsRequest request){var options = new InvokeOptions();options.RequestMarshaller = DescribeTransitGatewayVpcAttachmentsRequestMarshaller.Instance;options.ResponseUnmarshaller = DescribeTransitGatewayVpcAttachmentsResponseUnmarshaller.Instance;return Invoke<DescribeTransitGatewayVpcAttachmentsResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual DescribeTransitGatewayVpcAttachmentsResponse DescribeTransitGatewayVpcAttachments(DescribeTransitGatewayVpcAttachmentsRequest request){var options = new InvokeOptions();options.RequestMarshaller = DescribeTransitGatewayVpcAttachmentsRequestMarshaller.Instance;options.ResponseUnmarshaller = DescribeTransitGatewayVpcAttachmentsResponseUnmarshaller.Instance;return Invoke<DescribeTransitGatewayVpcAttachmentsResponse>(request, options);}",
+    "output": "public DescribeTransitGatewayVpcAttachmentsResult describeTransitGatewayVpcAttachments(DescribeTransitGatewayVpcAttachmentsRequest request) {request = beforeClientExecution(request);return executeDescribeTransitGatewayVpcAttachments(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public PutVoiceConnectorStreamingConfigurationResult putVoiceConnectorStreamingConfiguration(PutVoiceConnectorStreamingConfigurationRequest request) {request = beforeClientExecution(request);return executePutVoiceConnectorStreamingConfiguration(request);}",
+    "output": "public virtual PutVoiceConnectorStreamingConfigurationResponse PutVoiceConnectorStreamingConfiguration(PutVoiceConnectorStreamingConfigurationRequest request){var options = new InvokeOptions();options.RequestMarshaller = PutVoiceConnectorStreamingConfigurationRequestMarshaller.Instance;options.ResponseUnmarshaller = PutVoiceConnectorStreamingConfigurationResponseUnmarshaller.Instance;return Invoke<PutVoiceConnectorStreamingConfigurationResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual PutVoiceConnectorStreamingConfigurationResponse PutVoiceConnectorStreamingConfiguration(PutVoiceConnectorStreamingConfigurationRequest request){var options = new InvokeOptions();options.RequestMarshaller = PutVoiceConnectorStreamingConfigurationRequestMarshaller.Instance;options.ResponseUnmarshaller = PutVoiceConnectorStreamingConfigurationResponseUnmarshaller.Instance;return Invoke<PutVoiceConnectorStreamingConfigurationResponse>(request, options);}",
+    "output": "public PutVoiceConnectorStreamingConfigurationResult putVoiceConnectorStreamingConfiguration(PutVoiceConnectorStreamingConfigurationRequest request) {request = beforeClientExecution(request);return executePutVoiceConnectorStreamingConfiguration(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public OrdRange getOrdRange(String dim) {return prefixToOrdRange.get(dim);}",
+    "output": "public override OrdRange GetOrdRange(string dim){OrdRange result;prefixToOrdRange.TryGetValue(dim, out result);return result;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override OrdRange GetOrdRange(string dim){OrdRange result;prefixToOrdRange.TryGetValue(dim, out result);return result;}",
+    "output": "public OrdRange getOrdRange(String dim) {return prefixToOrdRange.get(dim);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public String toString() {String symbol = \"\";if (startIndex >= 0 && startIndex < getInputStream().size()) {symbol = getInputStream().getText(Interval.of(startIndex,startIndex));symbol = Utils.escapeWhitespace(symbol, false);}return String.format(Locale.getDefault(), \"%s('%s')\", LexerNoViableAltException.class.getSimpleName(), symbol);}",
+    "output": "public override string ToString(){string symbol = string.Empty;if (startIndex >= 0 && startIndex < ((ICharStream)InputStream).Size){symbol = ((ICharStream)InputStream).GetText(Interval.Of(startIndex, startIndex));symbol = Utils.EscapeWhitespace(symbol, false);}return string.Format(CultureInfo.CurrentCulture, \"{0}('{1}')\", typeof(Antlr4.Runtime.LexerNoViableAltException).Name, symbol);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override string ToString(){string symbol = string.Empty;if (startIndex >= 0 && startIndex < ((ICharStream)InputStream).Size){symbol = ((ICharStream)InputStream).GetText(Interval.Of(startIndex, startIndex));symbol = Utils.EscapeWhitespace(symbol, false);}return string.Format(CultureInfo.CurrentCulture, \"{0}('{1}')\", typeof(Antlr4.Runtime.LexerNoViableAltException).Name, symbol);}",
+    "output": "public String toString() {String symbol = \"\";if (startIndex >= 0 && startIndex < getInputStream().size()) {symbol = getInputStream().getText(Interval.of(startIndex,startIndex));symbol = Utils.escapeWhitespace(symbol, false);}return String.format(Locale.getDefault(), \"%s('%s')\", LexerNoViableAltException.class.getSimpleName(), symbol);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public E peek() {return peekFirstImpl();}",
+    "output": "public virtual E peek(){return peekFirstImpl();}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual E peek(){return peekFirstImpl();}",
+    "output": "public E peek() {return peekFirstImpl();}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public CreateWorkspacesResult createWorkspaces(CreateWorkspacesRequest request) {request = beforeClientExecution(request);return executeCreateWorkspaces(request);}",
+    "output": "public virtual CreateWorkspacesResponse CreateWorkspaces(CreateWorkspacesRequest request){var options = new InvokeOptions();options.RequestMarshaller = CreateWorkspacesRequestMarshaller.Instance;options.ResponseUnmarshaller = CreateWorkspacesResponseUnmarshaller.Instance;return Invoke<CreateWorkspacesResponse>(request, options);}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public virtual CreateWorkspacesResponse CreateWorkspaces(CreateWorkspacesRequest request){var options = new InvokeOptions();options.RequestMarshaller = CreateWorkspacesRequestMarshaller.Instance;options.ResponseUnmarshaller = CreateWorkspacesResponseUnmarshaller.Instance;return Invoke<CreateWorkspacesResponse>(request, options);}",
+    "output": "public CreateWorkspacesResult createWorkspaces(CreateWorkspacesRequest request) {request = beforeClientExecution(request);return executeCreateWorkspaces(request);}"
+  },
+  {
+    "instruction": "Translate the following Java function into a corresponding C# function",
+    "input": "public NumberFormatIndexRecord clone() {return copy();}",
+    "output": "public override Object Clone(){NumberFormatIndexRecord rec = new NumberFormatIndexRecord();rec.field_1_formatIndex = field_1_formatIndex;return rec;}"
+  },
+  {
+    "instruction": "Translate the following C# function into a corresponding Java function",
+    "input": "public override Object Clone(){NumberFormatIndexRecord rec = new NumberFormatIndexRecord();rec.field_1_formatIndex = field_1_formatIndex;return rec;}",
+    "output": "public NumberFormatIndexRecord clone() {return copy();}"
+  }
+]
